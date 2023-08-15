@@ -19,6 +19,8 @@ const server = http.createServer((req, res) => {
     res.end("service page");
   } else if (req.url === "/contact") {
     res.end("contact page");
+  } else if (req.url === "/users") {
+    res.end(JSON.stringify({ name: "asd", profile: "developer" }));
   } else {
     res.end("wrong url");
   }
