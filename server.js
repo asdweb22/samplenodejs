@@ -4,6 +4,7 @@
 
 const http = require("http");
 const fs = require("fs");
+require("dotenv").config();
 //accessing actual frontend home page in server file
 const home = fs.readFileSync("./index.html", "utf-8");
 
