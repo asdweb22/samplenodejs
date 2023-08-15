@@ -3,7 +3,7 @@
 //and deploy server on vercel
 
 const http = require("http");
-const fs = require("fs");
+// const fs = require("fs");
 require("dotenv").config();
 //accessing actual frontend home page in server file
 const home = fs.readFileSync("./index.html", "utf-8");
@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 2000;
 
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
-    res.end(home);
+    res.end("home");
   } else if (req.url === "/about") {
     res.end("about page");
   } else if (req.url === "/service") {
